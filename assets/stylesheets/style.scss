@@ -1,0 +1,83 @@
+@use "base";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: base.$font-family;
+  background-color: base.$dark-blue;
+  color: base.$light-cyan;
+}
+
+.main-wrapper {
+  display: inherit;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 35vh;
+  width: clamp(375px, 45vw, 70rem);
+  padding: 1.5rem;
+
+  .advice-wrapper {
+    display: inherit;
+    flex-direction: inherit;
+    background-color: base.$dark-grayish-blue;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: base.$font-weight;
+    border-radius: 1rem;
+
+    padding: 2.5rem;
+    gap: 2rem;
+
+    :first-child {
+      letter-spacing: 0.3rem;
+      color: base.$neon-green;
+      text-transform: uppercase;
+    }
+
+    :nth-child(2) {
+      text-align: center;
+      font-size: base.$font-size;
+    }
+
+    :nth-child(3) {
+      img {
+        width: 100%;
+      }
+      margin-block-end: 2rem;
+    }
+  }
+
+  .advice-dice {
+    background-color: base.$neon-green;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    display: inherit;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: -2rem;
+    position: fixed;
+    transition: all 0.4s;
+  }
+
+  .advice-dice:hover {
+    box-shadow: 0rem 0rem 2.5rem base.$neon-green;
+    animation: rotate all 0.5s;
+    cursor: pointer;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: 0;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

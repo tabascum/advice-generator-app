@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(218, 23%, 16%);
+  color: hsl(193, 38%, 86%);
+}
+
+.main-wrapper {
+  display: inherit;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 35vh;
+  width: clamp(375px, 45vw, 70rem);
+  padding: 1.5rem;
+}
+.main-wrapper .advice-wrapper {
+  display: inherit;
+  flex-direction: inherit;
+  background-color: hsl(217, 19%, 24%);
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  gap: 2rem;
+}
+.main-wrapper .advice-wrapper :first-child {
+  letter-spacing: 0.3rem;
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+}
+.main-wrapper .advice-wrapper :nth-child(2) {
+  text-align: center;
+  font-size: 28px;
+}
+.main-wrapper .advice-wrapper :nth-child(3) {
+  margin-block-end: 2rem;
+}
+.main-wrapper .advice-wrapper :nth-child(3) img {
+  width: 100%;
+}
+.main-wrapper .advice-dice {
+  background-color: hsl(150, 100%, 66%);
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  display: inherit;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: -2rem;
+  position: fixed;
+  transition: all 0.4s;
+}
+.main-wrapper .advice-dice:hover {
+  box-shadow: 0rem 0rem 2.5rem hsl(150, 100%, 66%);
+  animation: rotate all 0.5s;
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  0% {
+    transform: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
